@@ -37,3 +37,7 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+src/index.html
+src/wetter_grossstadt_koeln.html
+src/wetter_grossstadt_muenchen.html
+src/wetter_kleinstadt_rosenheim.html
