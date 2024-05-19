@@ -14,7 +14,7 @@ public class Grossstadt extends Stadt {
         String stadtteileString = String.join(", ", stadtteile.subList(0, stadtteile.size() - 1))
                 + " und " + stadtteile.get(stadtteile.size() - 1);
         return "<p>In " + name + " ist es " + wetter.toString().toLowerCase() + ".</p>"
-                + "<p> Dies trifft auch für " + stadtteileString + "zu.</p>";
+                + "<p> Dies trifft auch für " + stadtteileString + " zu.</p>";
     }
 
     @Override
