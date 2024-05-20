@@ -14,6 +14,14 @@ public class WebsitenGenerator {
     private List<Stadt> staedte = new ArrayList<>();
 
     /**
+     * Default constructor for the WebsitenGenerator class.
+     * This constructor initializes the list of cities.
+     */
+    public WebsitenGenerator() {
+        this.staedte = new ArrayList<>();
+    }
+
+    /**
      * Adds a city to the list of cities.
      *
      * @param stadt The city to add.
@@ -50,8 +58,7 @@ public class WebsitenGenerator {
     /**
      * Generates the web pages for all the cities added. It first generates an index page that contains links to all the city pages.
      * Then, it generates a web page for each city. The city page contains the same navigation as the index page and the content of the city.
-     * 
-     * @throws IOException if an error occurs while writing the files
+     *
      */
     public void generate() {
         String navigation = getNavigation();

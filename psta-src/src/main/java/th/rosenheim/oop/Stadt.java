@@ -2,9 +2,17 @@ package th.rosenheim.oop;
 
 /**
  * The abstract class representing a city.
+ * It has two abstract methods: getContent and getURL.
+ * It also has a method to format the name of the city for use in a URL.
  */
 public abstract class Stadt {
+    /**
+     * The name of the city.
+     */
     protected String name;
+    /**
+     * The weather of the city.
+     */
     protected Wetter wetter;
 
     /**
