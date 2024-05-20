@@ -1,10 +1,10 @@
 package th.rosenheim.oop;
 
-import java.io.IOException;
 import java.util.List;
 
 /**
  * The main class of the application.
+ *
  */
 public class App {
     /**
