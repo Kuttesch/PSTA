@@ -40,3 +40,6 @@ bin/
 
 ### Outputs ###
 psta-src/output/
+
+### JDoc Output ###
+Jdoc/
