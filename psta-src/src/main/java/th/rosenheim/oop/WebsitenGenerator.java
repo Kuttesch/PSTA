@@ -1,5 +1,6 @@
 package th.rosenheim.oop;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -55,12 +56,18 @@ public class WebsitenGenerator {
     public void generate() {
         String navigation = getNavigation();
         try {
-            FileWriter indexWriter = new FileWriter("index.html");
+            // Ensure the output directory exists
+            File outputDir = new File("./output");
+            if (!outputDir.exists()) {
+                outputDir.mkdir();
+            }
+
+            FileWriter indexWriter = new FileWriter("./output/index.html");
             indexWriter.write(generatePage(navigation, ""));
             indexWriter.close();
 
             for (Stadt stadt : staedte) {
-                FileWriter writer = new FileWriter(stadt.getURL());
+                FileWriter writer = new FileWriter("./output/" + stadt.getURL());
                 writer.write(generatePage(navigation, stadt.getContent()));
                 writer.close();
             }
