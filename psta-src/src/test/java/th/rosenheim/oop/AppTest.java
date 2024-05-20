@@ -54,9 +54,9 @@ public class AppTest {
 
         generator.generate();
 
-        assertTrue(new java.io.File("index.html").exists());
-        assertTrue(new java.io.File("wetter_kleinstadt_rosenheim.html").exists());
-        assertTrue(new java.io.File("wetter_grossstadt_muenchen.html").exists());
-        assertTrue(new java.io.File("wetter_grossstadt_koeln.html").exists());
+        assertTrue(new java.io.File("./output/index.html").exists());
+        assertTrue(new java.io.File("./output/wetter_kleinstadt_rosenheim.html").exists());
+        assertTrue(new java.io.File("./output/wetter_grossstadt_muenchen.html").exists());
+        assertTrue(new java.io.File("./output/wetter_grossstadt_koeln.html").exists());
     }
 }
