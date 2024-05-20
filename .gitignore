@@ -41,3 +41,7 @@ src/index.html
 src/wetter_grossstadt_koeln.html
 src/wetter_grossstadt_muenchen.html
 src/wetter_kleinstadt_rosenheim.html
+psta-src/wetter_kleinstadt_rosenheim.html
+psta-src/wetter_grossstadt_koeln.html
+psta-src/wetter_grossstadt_muenchen.html
+psta-src/index.html
