@@ -8,6 +8,12 @@ import java.util.List;
  */
 public class App {
     /**
+     * Default constructor.
+     */
+    public App() {                                          //Why is this needed for Jdoc?
+    }
+
+    /**
      * The main method of the application.
      * It creates an instance of the WebsitenGenerator, creates example instances of Kleinstadt and Grossstadt,
      * It adds the example cities to the generator, and generates the example website.
