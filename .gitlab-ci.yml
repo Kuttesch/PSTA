@@ -4,7 +4,7 @@ stages:
   - run
 
 variables:
-  PROJECT_DIR: "./src"
+  PROJECT_DIR: "./psta-src"
   JAR_NAME: "psta-src-1.0"
 
 
