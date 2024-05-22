@@ -43,3 +43,6 @@ psta-src/output/
 
 ### JDoc Output ###
 Jdoc/
+
+### VIM ###
+..gitignore.un~
