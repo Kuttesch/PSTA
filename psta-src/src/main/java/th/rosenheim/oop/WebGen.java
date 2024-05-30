@@ -7,27 +7,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * The WebsitenGenerator class is responsible for generating the weather website including the navigation and Subsites.
- * It allows adding cities and generating Subsites for each city.
+ * The WebGen class is responsible for generating the weather website including the navigation and Subsites.
+ * It allows adding cities and generating Subsites for each City.
  */
-public class WebsitenGenerator {
-    private List<Stadt> staedte = new ArrayList<>();
+public class WebGen {
+    private List<City> cities = new ArrayList<>();
 
     /**
-     * Default constructor for the WebsitenGenerator class.
+     * Default constructor for the WebGen class.
      * This constructor initializes the list of cities.
      */
-    public WebsitenGenerator() {
-        this.staedte = new ArrayList<>();
+    public WebGen() {
+        this.cities = new ArrayList<>();
     }
 
     /**
-     * Adds a city to the list of cities.
+     * Adds a City to the list of cities.
      *
-     * @param stadt The city to add.
+     * @param city The City to add.
      */
-    public void addStadt(Stadt stadt) {
-        staedte.add(stadt);
+    public void addCity(City city) {
+        cities.add(city);
     }
 
     /**
@@ -37,10 +37,10 @@ public class WebsitenGenerator {
      * @return The generated navigation string.
      */
     public String getNavigation() {
-        String staedteString = String.join("| ", staedte.stream()
-                .map(stadt -> "<a href=\"" + stadt.getURL() + "\">" + stadt.name + "</a>")
+        String cityString = String.join("| ", cities.stream()
+                .map(City -> "<a href=\"" + City.getURL() + "\">" + City.name + "</a>")
                 .toArray(String[]::new));
-     return "<h1>Die Wetter-Website</h1><p>" + staedteString + "</p>";
+     return "<h1>Die Wetter-Website</h1><p>" + cityString + "</p>";
 
     }
 
@@ -56,8 +56,8 @@ public class WebsitenGenerator {
     }
 
     /**
-     * Generates the web pages for all the cities added. It first generates an index page that contains links to all the city pages.
-     * Then, it generates a web page for each city. The city page contains the same navigation as the index page and the content of the city.
+     * Generates the web pages for all the cities added. It first generates an index page that contains links to all the City pages.
+     * Then, it generates a web page for each City. The City page contains the same navigation as the index page and the content of the City.
      *
      */
     public void generate() {
@@ -73,7 +73,7 @@ public class WebsitenGenerator {
             indexWriter.write(generatePage(navigation, ""));
             indexWriter.close();
 
-            for (Stadt stadt : staedte) {
+            for (City stadt : cities) {
                 FileWriter writer = new FileWriter("./output/" + stadt.getURL());
                 writer.write(generatePage(navigation, stadt.getContent()));
                 writer.close();
