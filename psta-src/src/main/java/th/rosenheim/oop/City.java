@@ -53,4 +53,5 @@ public abstract class City {
      * @return the URL of the City's Subsite
      */
     public abstract String getURL();
+
 }

@@ -23,9 +23,9 @@ public class App {
     public static void main(String[] args) {
         WebGen generator = new WebGen();
 
-        SmallCity rosenheim = new SmallCity("Rosenheim", Weather.WOLKIG);
-        BigCity muenchen = new BigCity("München", Weather.REGNERISCH, List.of("Schwabing", "Sendling", "Lehel", "Nymphenburg"));
-        BigCity koeln = new BigCity("Köln", Weather.SONNIG, List.of("Raderthal", "Ehrenfeld", "Nippes", "Poll", "Esch", "Pesch", "Kalk"));
+        SmallCity rosenheim = new SmallCity("Rosenheim", Weather.CLOUDY);
+        BigCity muenchen = new BigCity("München", Weather.RAINY, List.of("Schwabing", "Sendling", "Lehel", "Nymphenburg"));
+        BigCity koeln = new BigCity("Köln", Weather.SUNNY, List.of("Raderthal", "Ehrenfeld", "Nippes", "Poll", "Esch", "Pesch", "Kalk"));
 
         generator.addCity(rosenheim);
         generator.addCity(muenchen);

@@ -20,11 +20,11 @@ public class AppTest {
      */
     @Test
     public void testBigCity() {
-        BigCity muenchen = new BigCity("München", Weather.REGNERISCH, Arrays.asList("Schwabing", "Sendling", "Lehel", "Nymphenburg"));
+        BigCity muenchen = new BigCity("München", Weather.RAINY, Arrays.asList("Schwabing", "Sendling", "Lehel", "Nymphenburg"));
         assertEquals("<p>In München ist es regnerisch.</p><p> Dies trifft auch für Schwabing, Sendling, Lehel und Nymphenburg zu.</p>", muenchen.getContent());
         assertEquals("weather_bigcity_muenchen.html", muenchen.getURL());
 
-        BigCity koeln = new BigCity("Köln", Weather.SONNIG, Arrays.asList("Ehrenfeld", "Raderthal", "Nippes", "Poll", "Esch", "Pesch", "Kalk"));
+        BigCity koeln = new BigCity("Köln", Weather.SUNNY, Arrays.asList("Ehrenfeld", "Raderthal", "Nippes", "Poll", "Esch", "Pesch", "Kalk"));
         assertEquals("<p>In Köln ist es sonnig.</p><p> Dies trifft auch für Ehrenfeld, Raderthal, Nippes, Poll, Esch, Pesch und Kalk zu.</p>", koeln.getContent());
         assertEquals("weather_bigcity_koeln.html", koeln.getURL());
     }
@@ -35,7 +35,7 @@ public class AppTest {
      */
     @Test
     public void testSmallCity() {
-        SmallCity rosenheim = new SmallCity("Rosenheim", Weather.WOLKIG);
+        SmallCity rosenheim = new SmallCity("Rosenheim", Weather.CLOUDY);
         assertEquals("<p>In Rosenheim ist es wolkig.</p>", rosenheim.getContent());
         assertEquals("weather_smallcity_rosenheim.html", rosenheim.getURL());
     }
@@ -48,9 +48,9 @@ public class AppTest {
     public void testNavigation() {
             WebGen generator = new WebGen();
 
-        SmallCity rosenheim = new SmallCity("Rosenheim", Weather.WOLKIG);
-        BigCity muenchen = new BigCity("München", Weather.REGNERISCH, Arrays.asList("Schwabing", "Sendling", "Lehel", "Nymphenburg"));
-        BigCity koeln = new BigCity("Köln", Weather.SONNIG, Arrays.asList("Raderthal", "Ehrenfeld", "Nippes", "Poll", "Esch", "Pesch", "Kalk"));
+        SmallCity rosenheim = new SmallCity("Rosenheim", Weather.CLOUDY);
+        BigCity muenchen = new BigCity("München", Weather.RAINY, Arrays.asList("Schwabing", "Sendling", "Lehel", "Nymphenburg"));
+        BigCity koeln = new BigCity("Köln", Weather.SUNNY, Arrays.asList("Raderthal", "Ehrenfeld", "Nippes", "Poll", "Esch", "Pesch", "Kalk"));
 
         generator.addCity(rosenheim);
         generator.addCity(muenchen);
@@ -69,9 +69,9 @@ public class AppTest {
     public void testGeneratePage() {
         WebGen generator = new WebGen();
 
-        SmallCity rosenheim = new SmallCity("Rosenheim", Weather.WOLKIG);
-        BigCity muenchen = new BigCity("München", Weather.REGNERISCH, Arrays.asList("Schwabing", "Sendling", "Lehel", "Nymphenburg"));
-        BigCity koeln = new BigCity("Köln", Weather.SONNIG, Arrays.asList("Raderthal", "Ehrenfeld", "Nippes", "Poll", "Esch", "Pesch", "Kalk"));
+        SmallCity rosenheim = new SmallCity("Rosenheim", Weather.CLOUDY);
+        BigCity muenchen = new BigCity("München", Weather.RAINY, Arrays.asList("Schwabing", "Sendling", "Lehel", "Nymphenburg"));
+        BigCity koeln = new BigCity("Köln", Weather.SUNNY, Arrays.asList("Raderthal", "Ehrenfeld", "Nippes", "Poll", "Esch", "Pesch", "Kalk"));
 
         generator.addCity(rosenheim);
         generator.addCity(muenchen);

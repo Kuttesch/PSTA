@@ -30,7 +30,7 @@ public class BigCity extends City {
     public String getContent() {
         String districtsString= String.join(", ", districts.subList(0, districts.size() - 1))
                 + " und " + districts.get(districts.size() - 1);
-        return "<p>In " + name + " ist es " + weather.toString().toLowerCase() + ".</p>"
+        return "<p>In " + name + " ist es " + weather.getWeather() + ".</p>"
                 + "<p> Dies trifft auch für " + districtsString + " zu.</p>";
     }
 

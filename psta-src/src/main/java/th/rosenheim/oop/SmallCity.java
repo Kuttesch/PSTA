@@ -24,7 +24,7 @@ public class SmallCity extends City {
      */
     @Override
     public String getContent() {
-        return "<p>In " + name + " ist es " + weather.toString().toLowerCase() + ".</p>";
+        return "<p>In " + name + " ist es " + weather.getWeather() + ".</p>";
     }
 
     /**
