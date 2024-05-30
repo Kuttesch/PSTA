@@ -31,7 +31,7 @@ The project includes several classes and a test class. The main classes are as f
 
 Originally the names of the classes and some methods were in german, because in our task we were asked to use german names. Because of this there the interactions of the code and the documentation was a bit confusing.  
 After a short discussion with my professor I decided to change the names to english for better readability of the code and the documentation.
-This happend in this [commit](e49b4e8501084a80341b9765d2deb5d21f0f9400). For further information please refer to the commit.
+This happend in commit [Gitlab](https://inf-git.fh-rosenheim.de/oop-psta-sose24-projekte/psta-morikutt/-/commit/e49b4e8501084a80341b9765d2deb5d21f0f9400)/[Github](https://github.com/Kuttesch/PSTA/commit/e49b4e8501084a80341b9765d2deb5d21f0f9400). For further information please refer to the commit.
 ***
 ### Main Classes
 
