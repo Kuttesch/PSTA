@@ -4,9 +4,6 @@
 
 This project is an exercise in object-oriented programming. It creates a website generator that generates a static website with weather information for several cities and towns. The website includes a navigation bar with links to each city and town's weather page.
 
-Because I am from a german university, the names are in german. For convinience in using the program with unix systems, the umlauts are replaced by the corresponding vowel followed by an 'e'. For example, 'ä' is replaced by 'ae'. Also the 'ß' is replaced by 'ss'.  
-I also added the documentation in english for better understanding of the code.
-
 ## Table of Contents
 
 - [UML](#uml)
@@ -29,9 +26,10 @@ The project includes several classes and a test class. The main classes are as f
 ***
 ### Namings
 
-Originally the names of the classes and some methods were in german, because in our task we were asked to use german names. Because of this there the interactions of the code and the documentation was a bit confusing.  
+Originally the names of the classes and some methods were in german, because in our task we were asked to use german names. Because of this there the interactions of the code and the english documentation was a bit confusing.  
 After a short discussion with my professor I decided to change the names to english for better readability of the code and the documentation.
-This happend in commit [Gitlab](https://inf-git.fh-rosenheim.de/oop-psta-sose24-projekte/psta-morikutt/-/commit/e49b4e8501084a80341b9765d2deb5d21f0f9400)/[GitHub](https://github.com/Kuttesch/PSTA/commit/e49b4e8501084a80341b9765d2deb5d21f0f9400) and [Gitlab](https://inf-git.fh-rosenheim.de/oop-psta-sose24-projekte/psta-morikutt/-/commit/c5e55f094e88dab20294f2d3422b89d4dc83a050)/[GitHub](https://github.com/Kuttesch/PSTA/commit/c5e55f094e88dab20294f2d3422b89d4dc83a050). For further information please refer to the commit.
+This happend in commit [Gitlab](https://inf-git.fh-rosenheim.de/oop-psta-sose24-projekte/psta-morikutt/-/commit/e49b4e8501084a80341b9765d2deb5d21f0f9400)/[GitHub](https://github.com/Kuttesch/PSTA/commit/e49b4e8501084a80341b9765d2deb5d21f0f9400) and [Gitlab](https://inf-git.fh-rosenheim.de/oop-psta-sose24-projekte/psta-morikutt/-/commit/c5e55f094e88dab20294f2d3422b89d4dc83a050)/[GitHub](https://github.com/Kuttesch/PSTA/commit/c5e55f094e88dab20294f2d3422b89d4dc83a050). For further information please refer to the commit.  
+For convinience in using the program with unix systems, the umlauts are replaced by the corresponding vowel followed by an 'e'. For example, 'ä' is replaced by 'ae'. also the 'ß' is replaced by 'ss'.
 ***
 ### Main Classes
 
