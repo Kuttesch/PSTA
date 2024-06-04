@@ -44,11 +44,26 @@ For convinience in using the program with unix systems, the umlauts are replaced
 - `SmallCity`: Represents a small town. It uses the `City` class to represent the town. It can generate a content string and a URL for the town's weather page.
 
 - `WebGen`: Generates the website. It can add cities and towns, generate the website, return the navigation bar content and output the website to several `.html` files.
-
+***
 ### Test
 
-- `AppTest`: A JUnit test class that tests the `City`, `BigCity`, `SmallCity`, and `WebGen` classes.
+The project includes a comprehensive suite of tests to ensure the functionality of the main classes. These tests are located in the `psta-src/test` directory and are written using the JUnit testing framework.
 
+- `AppTest`: This is the main test class for the application. It contains tests for the `City`, `BigCity`, `SmallCity`, and `WebGen` classes. Each class has its own set of tests within `AppTest`, ensuring that each method and functionality of these classes works as expected.
+
+  - `testWeather`: These tests verify that the `Weather` enumeration works correctly and that the values are set as expected.
+
+  - `testCity`: These tests ensure that a `City` object can be correctly created and that its methods function as expected. This includes generating a content string and a URL for the city's weather page.
+
+  - `testBigCity`: These tests verify that a `BigCity` object, which represents a large city with different districts, functions correctly. This includes tests for generating a content string and a URL for the city's weather page.
+
+  - `testSmallCity`: These tests ensure that a `SmallCity` object, representing a small town, works as expected. This includes tests for generating a content string and a URL for the town's weather page.
+
+  - `testNavigation`: These tests verify that the `WebGen` class can generate the navigation bar content correctly.
+
+  - `testGeneratePages`: These tests ensure that the `WebGen` class can output the website to several `.html` files as expected.
+
+To run the tests, use the integrated testing tools in your IDE or run the `gradle test` command in the terminal from the root directory of the project.
 ### JavaDoc
 The project features JavaDoc documentation for each class. To generate the JavaDoc, use the intigrated tools of your IDE.
 
