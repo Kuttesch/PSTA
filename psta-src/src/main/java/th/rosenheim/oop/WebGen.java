@@ -78,6 +78,9 @@ public class WebGen {
                 writer.write(generatePage(navigation, stadt.getContent()));
                 writer.close();
             }
+            System.out.println("Web pages generated successfully.");
+            System.out.println("You can find the generated web pages in the output directory.");
+
         } catch (IOException e) {
             e.printStackTrace();
         }
