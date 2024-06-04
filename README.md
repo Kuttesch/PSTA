@@ -17,7 +17,7 @@ This project is an exercise in object-oriented programming. It creates a website
 
 ## UML
 
-Coming soon...
+![UML](UML.svg)
 
 ***
 ## Structure
