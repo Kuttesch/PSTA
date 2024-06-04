@@ -13,6 +13,42 @@ public class AppTest {
     public AppTest() {
     }
 
+    /**
+     * Test the Weather enum.
+     * Test the weather conditions.
+     */
+    @Test
+    public void testWeather() {
+        assertEquals("sonnig", Weather.SUNNY.getWeather());
+        assertEquals("regnerisch", Weather.RAINY.getWeather());
+        assertEquals("wolkig", Weather.CLOUDY.getWeather());
+
+        System.out.println("testWeather passed.");
+    }
+
+
+    /**
+     * Test the City class.
+     * Test the formatting of the name of the City for use in a URL.
+     */
+    @Test
+    public void testCity() {
+        City city = new City("München", Weather.RAINY) {
+            @Override
+            public String getContent() {
+                return "<p>In München ist es regnerisch.</p>";
+            }
+
+            @Override
+            public String getURL() {
+                return "weather_city_muenchen.html";
+            }
+        };
+        assertEquals("muenchen", city.formatNameForURL());
+
+        System.out.println("testCity passed.");
+    }
+
 
     /**
      * Test the BigCity class.
@@ -27,6 +63,8 @@ public class AppTest {
         BigCity koeln = new BigCity("Köln", Weather.SUNNY, Arrays.asList("Ehrenfeld", "Raderthal", "Nippes", "Poll", "Esch", "Pesch", "Kalk"));
         assertEquals("<p>In Köln ist es sonnig.</p><p> Dies trifft auch für Ehrenfeld, Raderthal, Nippes, Poll, Esch, Pesch und Kalk zu.</p>", koeln.getContent());
         assertEquals("weather_bigcity_koeln.html", koeln.getURL());
+
+        System.out.println("testBigCity passed.");
     }
 
     /**
@@ -38,6 +76,8 @@ public class AppTest {
         SmallCity rosenheim = new SmallCity("Rosenheim", Weather.CLOUDY);
         assertEquals("<p>In Rosenheim ist es wolkig.</p>", rosenheim.getContent());
         assertEquals("weather_smallcity_rosenheim.html", rosenheim.getURL());
+
+        System.out.println("testSmallCity passed.");
     }
 
     /**
@@ -59,6 +99,8 @@ public class AppTest {
         generator.generate();
 
         assertEquals("<h1>Die Wetter-Website</h1><p><a href=\"weather_smallcity_rosenheim.html\">Rosenheim</a>| <a href=\"weather_bigcity_muenchen.html\">München</a>| <a href=\"weather_bigcity_koeln.html\">Köln</a></p>", generator.getNavigation());
+
+        System.out.println("testNavigation passed.");
     }
 
     /**
@@ -83,5 +125,7 @@ public class AppTest {
         assertTrue(new java.io.File("./output/weather_smallcity_rosenheim.html").exists());
         assertTrue(new java.io.File("./output/weather_bigcity_muenchen.html").exists());
         assertTrue(new java.io.File("./output/weather_bigcity_koeln.html").exists());
+
+        System.out.println("testGeneratePage passed.");
     }
 }
